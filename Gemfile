@@ -39,7 +39,9 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 
+gem "therubyracer"
 gem 'bootstrap-sass'
+gem "twitter-bootstrap-rails"
 gem 'devise'
 gem 'simple_form'
 gem 'thin'
