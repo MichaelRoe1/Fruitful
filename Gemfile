@@ -40,6 +40,7 @@ gem 'spring',        group: :development
 
 
 gem "therubyracer"
+gem "less-rails"
 gem 'bootstrap-sass'
 gem "twitter-bootstrap-rails"
 gem 'devise'
