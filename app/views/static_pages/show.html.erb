@@ -45,6 +45,15 @@
         </div>
     </header>
 
+<%@location = Location.first %>
+<%= @location.january_produce.each do |x| %>
+<p><%= x.name %> </p>
+<p><%= x.img_url %> </p>
+<script type="text/javascript">
+  var image = x.img_url;
+  document.write("<img src=" + image + ">");
+</script>
+<%end%>
  
     <!-- Map -->
     <section id="contact" class="map">
