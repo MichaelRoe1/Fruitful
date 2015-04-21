@@ -1,0 +1,7 @@
+<p> Enter your location </p>
+<%= simple_form_for Location.new do |f| %>
+  <%= f.input :name%>
+  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+    <a href="/show">Submit</a></i>
+  <% end %>
+<% end %>
