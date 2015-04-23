@@ -53,5 +53,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root "static_pages#show"
+  root "static_pages#home"
+  resources :locations
+  get '/show' => 'static_pages#show'
 end

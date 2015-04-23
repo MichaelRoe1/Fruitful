@@ -2,62 +2,74 @@ class Location < ActiveRecord::Base
   has_many :seasonalities
 
   def january_produce
-  	arr = seasonalities.where(month :january)
-  	arr.map(produces)
+  	season = seasonalities.find_by month: "january"
+  	produce = season.produces
+    return produce
   end
 
-   def february_produce
-  	arr = seasonalities.where(month :february)
-  	arr.map(produces)
+  def february_produce
+    season = seasonalities.find_by month: "february"
+    produce = season.produces
+    return produce
   end
 
-   def march_produce
-  	arr = seasonalities.where(month :march)
-  	arr.map(produces)
+  def march_produce
+    season = seasonalities.find_by month: "march"
+    produce = season.produces 
+    return produce
   end
 
-   def april_produce
-  	arr = seasonalities.where(month :april)
-  	arr.map(produces)
+  def april_produce
+    season = seasonalities.find_by month: "april"
+    produce = season.produces
+    return produce
   end
 
-   def may_produce
-  	arr = seasonalities.where(month :may)
-  	arr.map(produces)
+  def may_produce
+    season = seasonalities.find_by month: "may"
+    produce = season.produces 
+    return produce
   end
 
-   def june_produce
-  	arr = seasonalities.where(month :june)
-  	arr.map(produces)
+  def june_produce
+  	season = seasonalities.find_by month: "june"
+    produce = season.produces
+    return produce
   end
 
-   def july_produce
-  	arr = seasonalities.where(month :july)
-  	arr.map(produces)
+  def july_produce
+  	season = seasonalities.find_by month: "july"
+    produce = season.produces
+    return produce
   end
 
-   def august_produce
-  	arr = seasonalities.where(month :august)
-  	arr.map(produces)
+  def august_produce
+  	aseason = seasonalities.find_by month: "august"
+    produce = season.produces
+    return produce
   end
 
-   def september_produce
-  	arr = seasonalities.where(month :september)
-  	arr.map(produces)
+  def september_produce
+  	season = seasonalities.find_by month: "september"
+    produce = season.produces
+    return produce
   end
 
-   def october_produce
-  	arr = seasonalities.where(month :october)
-  	arr.map(produces)
+  def october_produce
+  	season = seasonalities.find_by month: "october"
+    produce = season.produces
+    return produce
   end
 
   def november_produce
-  	arr = seasonalities.where(month :november)
-  	arr.map(produces)
+  	season = seasonalities.find_by month: "november"
+    produce = season.produces
+    return produce
   end
 
    def december_produce
-  	arr = seasonalities.where(month :december)
-  	arr.map(produces)
+  	season = seasonalities.find_by month: "december"
+    produce = season.produces
+    return produce
   end
 end
