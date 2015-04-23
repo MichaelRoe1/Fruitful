@@ -72,4 +72,75 @@ class Location < ActiveRecord::Base
     produce = season.produces
     return produce
   end
+
+
+
+  def add_january_produce(procuce_list)
+    season = seasonalities.find_by month: "january"
+    season.produces << produce_list
+  end
+
+  def add_february_produce(produce_list)
+    season = seasonalities.find_by month: "february"
+    season.produces << produce_list
+  end
+
+  def add_march_produce(produce_list)
+    season = seasonalities.find_by month: "march"
+    season.produces << produce_list
+  end
+
+
+  def add_april_produce(produce_list)
+    season = seasonalities.find_by month: "april"
+    season.produces << produce_list
+  end
+
+
+  def add_may_produce(produce_list)
+    season = seasonalities.find_by month: "may"
+    season.produces << produce_list
+  end
+
+
+  def add_june_produce(produce_list)
+    season = seasonalities.find_by month: "june"
+    season.produces << produce_list
+  end
+
+  def add_july_produce(produce_list)
+    season = seasonalities.find_by month: "july"
+    season.produces << produce_list
+  end
+
+
+  def add_august_produce(produce_list)
+    season = seasonalities.find_by month: "august"
+    season.produces << produce_list
+  end
+
+
+  def add_september_produce(produce_list)
+    season = seasonalities.find_by month: "september"
+    season.produces << produce_list
+  end
+
+
+  def add_october_produce(produce_list)
+    season = seasonalities.find_by month: "october"
+    season.produces << produce_list
+  end
+
+
+  def add_november_produce(produce_list)
+    season = seasonalities.find_by month: "november"
+    season.produces << produce_list
+  end
+
+
+   def add_december_produce(produce_list)
+    season = seasonalities.find_by month: "december"
+    season.produces << produce_list
+  end
+
 end
