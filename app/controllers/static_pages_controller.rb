@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-class StaticPagesController < ApplicationController
-end
-=======
 class StaticPagesController < ApplicationController
 	def home
 	end
@@ -19,4 +15,4 @@ class StaticPagesController < ApplicationController
 	end
 
 end
->>>>>>> 59fa60d7521a630ee505fd8ec29e4db389c715ac
+
