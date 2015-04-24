@@ -17,9 +17,9 @@ states = [
 "South Dakota","Tennessee","Texas","Utah","Vermont", "Virginia", "Washington", 
 "West Virginia", "Wisconsin","Wyoming"]
 
-months_of_year = ["january", "february", "march", "april",
-"may", "june", "july", "august", "september", "october",
-"november", "december"]
+months_of_year = ["January", "February", "March", "April",
+"May", "June", "July", "August", "September", "October",
+"November", "December"]
  
 #create 50 Locations for each state and
 #create seasonality aka 12 months of the year for each Location
@@ -62,7 +62,7 @@ ca.add_produce([Produce.get("Asparagus"), Produce.get("Avocados"), Produce.get("
 	Produce.get("Celery"), Produce.get("Chard"), Produce.get("Grapefruit"), 
 	Produce.get("Kale"), Produce.get("Kumquats"), Produce.get("Lemons"), Produce.get("Mushrooms"), 
 	Produce.get("Oranges"), Produce.get("Tangerines"), Produce.get("Dates"), Produce.get("Green Onion"), 
-	Produce.get("Passion Fruit"), Produce.get("Green Peas"), Produce.get("Strawberries")], "january")
+	Produce.get("Passion Fruit"), Produce.get("Green Peas"), Produce.get("Strawberries")], "January")
 
 # ca.add_produce([Produce.get("Asparagus"), Produce.get("Avocados"), Produce.get("Beets"), 
 # 	Produce.get("Broccoli"), Produce.get("Brussel Sprouts"), Produce.get("Cabbage"), Produce.get("Cauliflower"), 
