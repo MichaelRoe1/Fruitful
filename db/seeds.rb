@@ -57,16 +57,26 @@ produce_list = Set.new [Produce.create(name: "Artichokes", img_url: ""), Produce
 
 #For every Location for every Month(seasonality) fill with appropriate produce
 ca = Location.find_by name: "California"
-ca.add_january_produce([Produce.get("Avocados"), Produce.get("Broccoli"), Produce.get("Grapefruit"), Produce.get("Kale"), Produce.get("Kumquats"),
-	Produce.get("Lemons"), Produce.get("Mushrooms"), Produce.get("Oranges"), Produce.get("Tangerines") Produce.get("Swiss Chard")])
-ca.add_february_produce(Produce.get("Avocados"), Produce.get("Broccoli"), Produce.get("Swiss Chard"))
-ca.add_march_produce()
-ca.add_april_produce()
-ca.add_may_produce()
-ca.add_june_produce()
-ca.add_july_produce()
-ca.add_august_produce()
-ca.add_september_produce()
-ca.add_october_produce()
-ca.add_november_produce()
-ca.add_december_produce()
+ca.add_produce([Produce.get("Asparagus"), Produce.get("Avocados"), Produce.get("Beets"), 
+	Produce.get("Broccoli"), Produce.get("Cabbage"), Produce.get("Cauliflower"), 
+	Produce.get("Celery"), Produce.get("Chard"), Produce.get("Grapefruit"), 
+	Produce.get("Kale"), Produce.get("Kumquats"), Produce.get("Lemons"), Produce.get("Mushrooms"), 
+	Produce.get("Oranges"), Produce.get("Tangerines"), Produce.get("Dates"), Produce.get("Green Onion"), 
+	Produce.get("Passion Fruit"), Produce.get("Green Peas"), Produce.get("Strawberries")], "january")
+
+# ca.add_produce([Produce.get("Asparagus"), Produce.get("Avocados"), Produce.get("Beets"), 
+# 	Produce.get("Broccoli"), Produce.get("Brussel Sprouts"), Produce.get("Cabbage"), Produce.get("Cauliflower"), 
+# 	Produce.get("Celery"), Produce.get("Chard"), Produce.get("Carrots"), Produce.get("Grapefruit"), 
+# 	Produce.get("Kale"), Produce.get("Kumquats"), Produce.get("Lemons"), Produce.get("Mushrooms"), 
+# 	Produce.get("Oranges"), Produce.get("Tangerines"), Produce.get("Dates"), Produce.get("Lettuce"),
+# 	Produce.get("Green Onion"), Produce.get("Passion Fruit"), Produce.get("Green Peas"), Produce.get("Strawberries"), Produce.get("Turnips")], "february")
+# ca.add_march_produce()
+# ca.add_april_produce()
+# ca.add_may_produce()
+# ca.add_june_produce()
+# ca.add_july_produce()
+# ca.add_august_produce()
+# ca.add_september_produce()
+# ca.add_october_produce()
+# ca.add_november_produce()
+# ca.add_december_produce()
