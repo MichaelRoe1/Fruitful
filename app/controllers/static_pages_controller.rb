@@ -9,4 +9,9 @@ class StaticPagesController < ApplicationController
 		#in location.rb use getproduce method
 		@p = @l.get_produce(@month)
 	end
+
+	def reroute
+		render "home.html.erb"
+	end
+
 end
