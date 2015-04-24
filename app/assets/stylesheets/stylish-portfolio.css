@@ -162,6 +162,17 @@ hr.small {
     -o-background-size: cover;
 }
 
+.header2 {
+    display: table;
+    position: left;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(170, 232, 247);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
 /* About */
 
 .about {
