@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,11 +40,13 @@ gem 'spring',        group: :development
 
 
 gem "therubyracer"
+#gem 'less-rails'
 gem 'bootstrap-sass'
 gem "twitter-bootstrap-rails"
 gem 'devise'
 gem 'simple_form'
 gem 'thin'
+gem 'gmaps4rails'
 
 group :development do
   gem 'better_errors'
@@ -63,4 +65,7 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+gem 'geocoder'
+
 
