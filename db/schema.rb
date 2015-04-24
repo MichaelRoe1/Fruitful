@@ -11,18 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424202824) do
+#<<<<<<< HEAD
 
-  create_table "users", force: true do |t|
-    t.float    "longitude"
-    t.float    "latitude"
-    t.string   "address"
-    t.text     "description"
-    t.string   "title"
+ActiveRecord::Schema.define(version: 20150422070642) do
+
+  create_table "locations", force: true do |t|
+    t.string   "name"
+#>>>>>>> 59fa60d7521a630ee505fd8ec29e4db389c715ac
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+#<<<<<<< HEAD
+#end
+
+
+#=======
+  create_table "produces", force: true do |t|
+    t.string "name"
+    t.string "img_url"
+  end
+
+  create_table "produces_seasonalities", force: true do |t|
+    t.integer "produce_id"
+    t.integer "seasonality_id"
+  end
+
+  create_table "seasonalities", force: true do |t|
+    t.string  "location"
+    t.string  "month"
+    t.integer "location_id"
+  end
+
 end
-
-
+#>>>>>>> 59fa60d7521a630ee505fd8ec29e4db389c715ac

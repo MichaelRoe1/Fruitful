@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  january_id: 
+  february_id: 
+  march_id: 
+  april_id: 
+  may_id: 
+  june_id: 
+  july_id: 
+  august_id: 
+  september_id: 
+  october_id: 
+  november_id: 
+  december_id: 
+
+two:
+  location: MyString
+  january_id: 
+  february_id: 
+  march_id: 
+  april_id: 
+  may_id: 
+  june_id: 
+  july_id: 
+  august_id: 
+  september_id: 
+  october_id: 
+  november_id: 
+  december_id: 
