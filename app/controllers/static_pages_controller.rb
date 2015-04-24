@@ -1,8 +1,5 @@
 class StaticPagesController < ApplicationController
-	def show
-	end
-
-	def index
+	def home
 	end
 
 	def location
