@@ -62,7 +62,7 @@ ca.add_produce([Produce.get("Asparagus"), Produce.get("Avocados"), Produce.get("
 	Produce.get("Celery"), Produce.get("Chard"), Produce.get("Grapefruit"), 
 	Produce.get("Kale"), Produce.get("Kumquats"), Produce.get("Lemons"), Produce.get("Mushrooms"), 
 	Produce.get("Oranges"), Produce.get("Tangerines"), Produce.get("Dates"), Produce.get("Green Onion"), 
-	Produce.get("Passion Fruit"), Produce.get("Green Peas"), Produce.get("Strawberries")], "January")
+	Produce.get("Passion Fruit"), Produce.get("Green Peas"), Produce.get("Strawberries")], "April")
 
 # ca.add_produce([Produce.get("Asparagus"), Produce.get("Avocados"), Produce.get("Beets"), 
 # 	Produce.get("Broccoli"), Produce.get("Brussel Sprouts"), Produce.get("Cabbage"), Produce.get("Cauliflower"), 

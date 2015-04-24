@@ -53,8 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root "static_pages#show"
-  match "/show", to: "static_pages#location", via: "post"
+  root "static_pages#home"
+  match "/seasonality", to: "static_pages#location", via: "post"
   #put "locations/location_produce/(.:format)", to: "location#location_produce", as: :produce
   #need to route from locations controller to the new html page
   #get "location/getproduce/(.:format)", to: "???", as: :index

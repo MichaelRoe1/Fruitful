@@ -1,8 +1,5 @@
 class StaticPagesController < ApplicationController
-	def show
-	end
-
-	def index
+	def home
 	end
 
 	def location
@@ -11,6 +8,6 @@ class StaticPagesController < ApplicationController
 		@month = Date::MONTHNAMES[Date.today.month]
 		#in location.rb use getproduce method
 		@p = @l.get_produce(@month)
-		redirect_to index_path(@p)
+		#redirect_to index_path(@p)
 	end
 end
