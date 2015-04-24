@@ -11,6 +11,5 @@ class StaticPagesController < ApplicationController
 		@month = Date::MONTHNAMES[Date.today.month]
 		#in location.rb use getproduce method
 		@p = @l.get_produce(@month)
-		redirect_to index_path(@p)
 	end
 end
