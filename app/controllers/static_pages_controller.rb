@@ -8,4 +8,9 @@ class StaticPagesController < ApplicationController
 		@month = Date::MONTHNAMES[Date.today.month]
 		@p = @l.get_produce(@month)
 	end
+
+	def reroute
+		render "home.html.erb"
+	end
+
 end

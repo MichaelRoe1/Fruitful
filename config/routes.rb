@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   #   end
   root "static_pages#home"
   match "/seasonality", to: "static_pages#location", via: "post"
+  get "/seasonality", to: "static_pages#reroute"
   #put "locations/location_produce/(.:format)", to: "location#location_produce", as: :produce
   #need to route from locations controller to the new html page
   #get "location/getproduce/(.:format)", to: "???", as: :index

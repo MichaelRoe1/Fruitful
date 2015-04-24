@@ -26,9 +26,7 @@ months_of_year = ["January", "February", "March", "April",
 states.each do |state|
   l = Location.create(name: state)
   months_of_year.each do |m|
-    s = Seasonality.new
-    s.location = l
-    s.month = m
+    s = Seasonality.create(location: l, month: m)
     l.seasonalities << s
   end
 end
@@ -63,7 +61,7 @@ ca.add_produce([Produce.get("Asparagus"), Produce.get("Avocados"), Produce.get("
 	Produce.get("Kale"), Produce.get("Kumquats"), Produce.get("Lemons"), Produce.get("Mushrooms"), 
 	Produce.get("Oranges"), Produce.get("Tangerines"), Produce.get("Dates"), Produce.get("Green Onion"), 
 	Produce.get("Passion Fruit"), Produce.get("Green Peas"), Produce.get("Strawberries")], "April")
-
+	Produce.get("Passion Fruit"), Produce.get("Green Peas"), Produce.get("Strawberries")], "April")
 # ca.add_produce([Produce.get("Asparagus"), Produce.get("Avocados"), Produce.get("Beets"), 
 # 	Produce.get("Broccoli"), Produce.get("Brussel Sprouts"), Produce.get("Cabbage"), Produce.get("Cauliflower"), 
 # 	Produce.get("Celery"), Produce.get("Chard"), Produce.get("Carrots"), Produce.get("Grapefruit"), 
