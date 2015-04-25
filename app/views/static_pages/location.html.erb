@@ -39,6 +39,8 @@
     <header id="top" class="header2">
         <div class="text-vertical-center">
             <h3>Seasonal Produce Near You</h3>
+            <br>
+            <a href="#map" class="btn btn-dark btn-lg">Find Local Farmers Markets</a>
             <% @p.each do |p| %> 
             <p> <%= p.name %> </p>
             	<%= p.img_url %> 
@@ -46,7 +48,7 @@
            </div>
     </header>
  <!-- Map -->
-    <section id="contact" class="map">
+    <section id="map" class="map">
         <iframe width="200%" height="150%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
         <br />
         <small>
