@@ -5,8 +5,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- NEXT SEVEN LINES TAKEN FROM INDEX -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+    <script language="javascript" type="text/javascript" src="assets/map.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/search.js"></script>
 
     <title>Seasonal Produce</title>
 
@@ -33,6 +43,7 @@
 
 </head>
 
+
 <body>
 
 <!-- Header -->
@@ -46,14 +57,25 @@
            </div>
     </header>
  <!-- Map -->
-    <section id="contact" class="map">
-        <iframe width="200%" height="150%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-        </iframe>
-    </section>
+ <div id="control">
+    <h2>What's In Season?</h2>
+    <p>We'll help you locate your state's farmer's markets and show you what's currently in season.</p>
+    <form method="get" id="chooseZip">
+      <button type="submit" class="learnButton">Use current location</button>
+      <button type="button" id="searchZip" class="learnButton">Search by Zip Code</button> 
+      <div class="clear"></div>
+      <div class="zipSearch">
+        <input id="textZip" type="text" name="zip" placeholder="enter your zipcode" autofocus>
+        <button type="submit" class="learnButton">Search</button>
+      </div> 
+      <div class="clear"></div>
+    </form>
+    <div class="clear"></div>
+    <div id="results"></div>
+  </div>
+  
+<!-- an empty div for the map -->
+  <div id="map-canvas"></div>
 
  
 </body>

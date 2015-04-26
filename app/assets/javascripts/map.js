@@ -3,14 +3,12 @@ $(document).ready(function() {
 	var marketId = [];
 	var allLatlng = [];
 	var allMarkers = [];
-	var markerName = [];
+	var marketName = [];
 	var infowindow = null;
 	var pos;
 	var userCords;
-	//var userLat;
-	//var userLng;
 	var tempMarkerHolder = [];
-	// This is used if we want to ask our user whether to provide their current location or not
+	// This is used to ask the user for their current location. 
  	if (navigator.geolocation) {
 
 		function error(err) {
@@ -26,9 +24,9 @@ $(document).ready(function() {
 		alert("Geolocation is not supported in your browser");
 	} 
 
-	// MAP OPTIONS CONTROLS
+	// THE GOOGLE MAP'S OPTION CONTROLS
 	var mapOptions = {
-		zoom: 5,
+		zoom: 4,
 		center: new google.maps.LatLng(37.09024, -100.712891),
 		panControl: false, //can set to true to allow pan options (which we can customize)
 		panControlOptions: {
@@ -42,25 +40,25 @@ $(document).ready(function() {
 		scaleControl: false
 	};
 
-	//INFO WINDOW OPTIONS CONTROLS
+	//INFO WINDOW'S OPTION CONTROLS
 	//Actual content will come in later
 	infowindow = new google.maps.InfoWindow({
 		content: "holding..."
 	});
 
 	//PREPARE A DIV FOR THE ACTUAL GOOGLE MAP
-	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);	
 
 	//chooseState is an id defined in index.html, which comes from the form that the user types in
-	$('chooseState').submit(function(){
+	$('#chooseZip').submit(function(){
 		//textZip is the input from the user, this is id can be found in index.html
-		var stateInp = $("textState").val();
+		//alert("I'M IN HERE!");
+		var userZip = $("#textZip").val();
 		//defining the variable that will hold the retrieved zip and adding it to the proper URL 
-		var accessURL
-		var geocoder =  new google.maps.Geocoder();
-		alert("I'M IN HERE!");
+		//var accessURL
+		//var geocoder =  new google.maps.Geocoder();
 		//When given the state input, geocoder.geocode will get that states Latitude and Longitude
-    	geocoder.geocode({ 'textState': stateInp}, function(results, status) {
+    	/*geocoder.geocode({ 'address': stateInp}, function(results, status) {
     		if (status == google.maps.GeocoderStatus.OK) {
     			userCords = results
     			//userLat = results[0].geometry.location.lat();
@@ -69,12 +67,12 @@ $(document).ready(function() {
             } else {
             	alert("Something went wrong " + status);
             }
-        });
+        }); */ 
 		//This checks whether our user gave us a valid state name
-		if(stateInp) {
-			accessURL = "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/locSearch?lat=" + userCords[0].geometry.location.lat(); + "&lng=" + userCords[0].geometry.location.lng();
+		if(userZip){
+			accessURL = "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" + userZip;
 		} else {
-			alert("Please provide us with a valid US state name")
+			accessURL = "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/locSearch?lat=" + userCords.latitude + "&lng=" + userCords.longitude;
 		}
 
 		//Use the state name and return all market ids in area.
@@ -90,7 +88,7 @@ $(document).ready(function() {
 						marketId.push(val.id);
 						marketName.push(val.marketname);
 					});
-					console.log(marketName);
+					//console.log(marketName);
 					var counter = 0;
 					//Now, use the id to get detailed info
 					$.each(marketId, function (k, v){
