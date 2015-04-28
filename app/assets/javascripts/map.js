@@ -12,7 +12,7 @@ $(document).ready(function() {
  	if (navigator.geolocation) {
 
 		function error(err) {
-			console.warn('ERROR(' + err.code + '):' + err.message);
+			console.warn('ERROR(' + err.code + '): ' + err.message);
 		}
 		// success will assign user's coords to userCords 
 		function success(pos) {
@@ -20,9 +20,9 @@ $(document).ready(function() {
 		}
 		navigator.geolocation.getCurrentPosition(success, error);
 
-	} else {
-		alert("Geolocation is not supported in your browser");
-	} 
+		} else {
+			alert("Geolocation is not supported in your browser");
+		} 
 
 	// THE GOOGLE MAP'S OPTION CONTROLS
 	var mapOptions = {
@@ -49,13 +49,12 @@ $(document).ready(function() {
 	//PREPARE A DIV FOR THE ACTUAL GOOGLE MAP
 	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);	
 
-	//chooseState is an id defined in index.html, which comes from the form that the user types in
+	//chooseZip is an id defined in index.html, which comes from the form that the user types in
 	$('#chooseZip').submit(function(){
 		//textZip is the input from the user, this is id can be found in index.html
-		//alert("I'M IN HERE!");
 		var userZip = $("#textZip").val();
 		//defining the variable that will hold the retrieved zip and adding it to the proper URL 
-		//var accessURL
+		var accessURL
 		//var geocoder =  new google.maps.Geocoder();
 		//When given the state input, geocoder.geocode will get that states Latitude and Longitude
     	/*geocoder.geocode({ 'address': stateInp}, function(results, status) {
@@ -144,7 +143,7 @@ $(document).ready(function() {
 								  		bounds.extend (allLatlng[i]);
 								  	}
 									//  Fit these bounds to the map
-									map.fitBounds (bounds);
+									map.fitBounds(bounds);
 								}
 							});
 							}); //end .each
