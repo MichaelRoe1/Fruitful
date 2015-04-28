@@ -4,11 +4,9 @@
             <h3>Seasonal Produce Near You</h3>
             <br>
             <a href="#map" class="btn btn-dark btn-lg">Find Local Farmers Markets</a>
-            <% @p.in_groups_of(3).each do |p_3| %> 
-                <% p_3.each do |p| %> 
-                    <p> <%= p.name %> </p>
-            	   <%= image_tag(p.img_url, :size => "70x75") %> 
-                <% end %>
+            <% @p.each do |p| %> 
+                <p> <%= p.name %> </p>
+                <%= image_tag(p.img_url, :size => "70x75") %>     
             <% end %>
            </div>
     </header>
