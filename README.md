@@ -1,4 +1,36 @@
-<<<<<<< HEAD
+Title: Fruitful - A Site for Finding Seasonal Produce 
+
+Team Members: Michael Roe, Nick Rodgriguez, & Daniel Goldberg 
+
+Website Link: http://seasonality.herokuapp.com/seasonality
+
+Demo Link: 
+
+Idea: Our application informs the user with the produce which is currently in season based on their location. We also map the user to local farmers markets in their area, where said produce may be bought fresh. It works by using the USDA National Farmers Market Directory API which provides information on seasonal produce and regional farmers markets, and it also uses the Google Maps API to map these local market locations. 
+
+Models and Description:
+
+Produces: has name, and image url. Produce objects belong to a particular months of the location/month.
+	Model Relationships: has_and_belongs_to_many Locations
+
+
+Location: has location name (all 50 States in the U.S.)
+	Model Relationships: has_many Seasonalities
+						 has_and_belongs_to_many Produces
+
+
+Seasonality: has location name, month, and location_id. 
+	Model Relationships: belongs_to Locations
+						 has_and_belongs_to_many Produces
+
+Division of Labor: 
+
+Michael: implemented Bootstrap theme and associated gems. Homepage design and routing between pages. 
+
+Nick: implemented connection between GoogleMaps API & USDA Farmer's Market API, allowing "zip code" & "current location" search.
+
+Daniel: created the Models and Model Relationships. Filled the databse with all the information. 
+
 Rails Devise
 ================
 
