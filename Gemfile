@@ -46,6 +46,7 @@ gem "twitter-bootstrap-rails"
 gem 'devise'
 gem 'simple_form'
 gem 'thin'
+gem 'gmaps4rails'
 
 group :development do
   gem 'better_errors'
@@ -64,4 +65,7 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+gem 'geocoder'
+
 
