@@ -1,12 +1,12 @@
 Title: Fruitful - A Site for Finding Seasonal Produce 
 
-Team Members: Michael Roe, Nick Rodgriguez, & Daniel Goldberg 
+Team Members: Michael Roe, Nick Rodriguez, & Daniel Goldberg 
 
 Website Link: http://seasonality.herokuapp.com/seasonality
 
 Demo Link: 
 
-Idea: Our application informs the user with the produce which is currently in season based on their location. We also map the user to local farmers markets in their area, where said produce may be bought fresh. It works by using the USDA National Farmers Market Directory API which provides information on seasonal produce and regional farmers markets, and it also uses the Google Maps API to map these local market locations. 
+Idea: Our application informs you with produce that is currently in season, based on your location. We also map the you to local farmers markets in your area (or any zipcode you'd like), where seasonal produce may be bought fresh. It works by using the USDA National Farmers Market Directory API which provides information on seasonal produce and regional farmers markets, and it also uses the Google Maps API to map these local market locations. 
 
 Models and Description:
 
