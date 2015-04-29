@@ -1,13 +1,13 @@
 <!-- Header -->
 <header id="top" class="header">
     <div class="text-vertical-center">
-        <h1>Fruitful</h1>
-        <h3>Find Seasonal Produce Near You</h3>
+        <h1><font color="white">Fruitful</font></h1>
+        <h3><b><font color="white">Find Seasonal Produce Near You</font></b></font></h3>
         <br>
         <%= form_tag({controller: "static_pages", action: "location"}, method: "post") do %>
         <%= label_tag(:name, "Enter your State:") %>
         <%= text_field_tag(:name) %>
-        <%= submit_tag("Find Seasonal Produce!") %>
+        <%= submit_tag("Submit") %>
          <% if @l == nil %>
         <p> <b><font color="red"><%= flash[:error] %> </font></b></p>
           <% end %>
