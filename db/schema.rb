@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20150424202824) do
   end
 
   create_table "produces", force: true do |t|
-    t.string "name"
-    t.string "img_url"
+    t.string   "name"
+    t.string   "img_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "produces_seasonalities", force: true do |t|
@@ -30,19 +32,11 @@ ActiveRecord::Schema.define(version: 20150424202824) do
   end
 
   create_table "seasonalities", force: true do |t|
-    t.string  "location"
-    t.string  "month"
-    t.integer "location_id"
-  end
-
-  create_table "users", force: true do |t|
-    t.float    "longitude"
-    t.float    "latitude"
-    t.string   "address"
-    t.text     "description"
-    t.string   "title"
+    t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "month"
+    t.integer  "location_id"
   end
 
 end
